@@ -1,0 +1,11 @@
+C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\bin\Debug\netcoreapp2.0\Lab08Tom.deps.json
+C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\bin\Debug\netcoreapp2.0\Lab08Tom.runtimeconfig.json
+C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\bin\Debug\netcoreapp2.0\Lab08Tom.runtimeconfig.dev.json
+C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\bin\Debug\netcoreapp2.0\Lab08Tom.dll
+C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\obj\Debug\netcoreapp2.0\Lab08Tom.csprojResolveAssemblyReference.cache
+C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\obj\Debug\netcoreapp2.0\Lab08Tom.csproj.CoreCompileInputs.cache
+C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\obj\Debug\netcoreapp2.0\Lab08Tom.AssemblyInfoInputs.cache
+C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\obj\Debug\netcoreapp2.0\Lab08Tom.AssemblyInfo.cs
+C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\bin\Debug\netcoreapp2.0\Lab08Tom.pdb
+C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\obj\Debug\netcoreapp2.0\Lab08Tom.dll
+C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\obj\Debug\netcoreapp2.0\Lab08Tom.pdb
