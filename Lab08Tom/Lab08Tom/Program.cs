@@ -12,16 +12,15 @@ namespace Lab08Tom
         {
             string json;
 
-            using (StreamReader sr = File.OpenText(@"C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\data.json"))
+            using (StreamReader sr = File.OpenText("data.json"))
             {
-                json = File.ReadAllText(@"C:\Users\Tom\source\repos\Class08-LINQ\Lab08Tom\Lab08Tom\data.json");
+                json = File.ReadAllText("data.json");
             }
 
-            RootObject featureCollection = JsonConvert.DeserializeObject<RootObject>(json);
+            RootObject jsonObject = JsonConvert.DeserializeObject<RootObject>(json);
 
             Console.WriteLine("Question 1: Output all neighborhoods in this data list.");
-            var allFeatures = from o in featureCollection.Features
-                              where o.Properties.Neighborhood != null
+            var allFeatures = from o in jsonObject.Features
                               select o;
 
             foreach (FeatureCollection feature in allFeatures)
@@ -33,7 +32,7 @@ namespace Lab08Tom
             Console.WriteLine();
             Console.WriteLine("Question 2: Filter out all the neighborhoods that do not have any names.");
 
-            var namedNeighborhoods = from l in featureCollection.Features
+            var namedNeighborhoods = from l in jsonObject.Features
                                      where l.Properties.Neighborhood != ""
                                      select l;
 
@@ -46,13 +45,24 @@ namespace Lab08Tom
             Console.WriteLine();
             Console.WriteLine("Question 3: Remove the Duplicates.");
 
+            var uniqueNeighborhoods = namedNeighborhoods.GroupBy(a => a.Properties.Neighborhood).Select(b => b.First());
+            foreach (FeatureCollection feature in uniqueNeighborhoods)
+            {
+                Console.WriteLine(feature.Properties.Neighborhood);
+            }
+
 
             Console.WriteLine();
             Console.WriteLine("Question 4: Rewrite the queries from above, and consolidate all into one single query.");
 
+            var consolidate = jsonObject.Features.Where(c =>c.Properties.Neighborhood != "").GroupBy(p => p.Properties.Neighborhood).Select(m => m.First());
+            foreach (FeatureCollection feature in consolidate)
+            {
+                Console.WriteLine(feature.Properties.Neighborhood);
+            }
+
 
             Console.Read();
-
         }
 
 
