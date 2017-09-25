@@ -21,7 +21,6 @@ namespace Lab08Tom
 
             Console.WriteLine("Question 1: Output all neighborhoods in this data list.");
             var allFeatures = from o in jsonObject.Features
-                              where o.Properties.Neighborhood != null
                               select o;
 
             foreach (FeatureCollection feature in allFeatures)
@@ -46,15 +45,24 @@ namespace Lab08Tom
             Console.WriteLine();
             Console.WriteLine("Question 3: Remove the Duplicates.");
 
-
+            var uniqueNeighborhoods = namedNeighborhoods.GroupBy(a => a.Properties.Neighborhood).Select(b => b.First());
+            foreach (FeatureCollection feature in uniqueNeighborhoods)
+            {
+                Console.WriteLine(feature.Properties.Neighborhood);
+            }
 
 
             Console.WriteLine();
             Console.WriteLine("Question 4: Rewrite the queries from above, and consolidate all into one single query.");
 
+            var consolidate = jsonObject.Features.Where(c =>c.Properties.Neighborhood != "").GroupBy(p => p.Properties.Neighborhood).Select(m => m.First());
+            foreach (FeatureCollection feature in consolidate)
+            {
+                Console.WriteLine(feature.Properties.Neighborhood);
+            }
+
 
             Console.Read();
-
         }
 
 
